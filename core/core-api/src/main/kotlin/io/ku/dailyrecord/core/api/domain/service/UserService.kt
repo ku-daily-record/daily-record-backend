@@ -8,7 +8,11 @@ import org.springframework.stereotype.Service
 class UserService(
     private val userRepository: UserRepository,
 ) {
-    fun readUser(email: String): UserEntity? {
+    fun readUserById(id: Long): UserEntity? {
+        return userRepository.findById(id).orElse(null)
+    }
+
+    fun readUserByEmail(email: String): UserEntity? {
         return userRepository.findByEmail(email)
     }
 }

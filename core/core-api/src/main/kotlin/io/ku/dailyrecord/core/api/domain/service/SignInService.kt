@@ -11,7 +11,7 @@ class SignInService(
     private val userService: UserService,
 ) {
     fun signIn(signInRequestVo: SignInRequestVo): UserVo {
-        val user = userService.readUser(signInRequestVo.email)
+        val user = userService.readUserByEmail(signInRequestVo.email)
 
         return user?.let {
             if (isCorrectPassword(signInRequestVo.password, it.password)) {
@@ -19,7 +19,7 @@ class SignInService(
             } else {
                 throw CoreApiException(ErrorType.AUTHENTICATION_FAILED)
             }
-        } ?: throw CoreApiException(ErrorType.NOT_FOUNT_USER)
+        } ?: throw CoreApiException(ErrorType.NOT_FOUND_USER)
     }
 
     fun isCorrectPassword(inputPassword: String, originPassword: String): Boolean {
