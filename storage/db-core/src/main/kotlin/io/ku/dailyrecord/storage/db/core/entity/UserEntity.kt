@@ -5,7 +5,7 @@ import jakarta.persistence.Entity
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 class UserEntity(
     @Column(length = 100, unique = true)
     val email: String,
