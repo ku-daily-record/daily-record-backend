@@ -1,0 +1,10 @@
+springdoc:
+  api-docs:
+    path: /daily-record/api-docs
+  swagger-ui:
+    path: /daily-record/swagger-ui.html
+    config-url: /daily-record/api-docs/swagger-config
+    url: /daily-record/api-docs
+    disable-swagger-default-url: true
+    operations-sorter: method
+    enabled: true
