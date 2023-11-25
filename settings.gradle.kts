@@ -1,13 +1,12 @@
-rootProject.name = "spring-boot-kotlin-template"
+rootProject.name = "daily-record"
 
 include(
     "core:core-enum",
     "core:core-api",
     "storage:db-core",
-    "tests:api-docs",
     "support:logging",
     "support:monitoring",
-    "clients:client-example"
+    "clients:client-example",
 )
 
 pluginManagement {
