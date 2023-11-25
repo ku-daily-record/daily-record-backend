@@ -12,14 +12,16 @@ spring.config.activate.on-profile: local
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
-        show_sql: true
+      format_sql: true
+      show_sql: true
+      ddl-auto: none
   h2:
     console:
       enabled: true
+  sql:
+    init:
+      schema-locations: classpath:init/h2-schema.sql
+      mode: always
 
 storage:
   datasource:
