@@ -7,9 +7,7 @@ spring:
       hibernate.default_batch_fetch_size: 100
 
 ---
-spring.config.activate.on-profile:
-  - local
-  - dev
+spring.config.activate.on-profile: local
 
 spring:
   jpa:
@@ -37,15 +35,7 @@ storage:
         rewriteBatchedStatements: true
 
 ---
-spring.config.activate.on-profile: local-dev
-
-spring:
-  jpa:
-    properties:
-      hibernate:
-        show_log: true
-        format_sql: true
-    show-sql: true
+spring.config.activate.on-profile: dev
 
 storage:
   datasource:
