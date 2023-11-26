@@ -12,7 +12,10 @@ data class ReadFriendsResponseDto(
             with(vo) {
                 return ReadFriendsResponseDto(
                     this?.map {
-                        FriendDto(it.id)
+                        FriendDto(
+                            id = it.id,
+                            profileImageUrl = it.profileImageUrl,
+                        )
                     },
                 )
             }

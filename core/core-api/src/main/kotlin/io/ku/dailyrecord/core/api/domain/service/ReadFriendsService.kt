@@ -15,6 +15,10 @@ class ReadFriendsService(
 
         val friendships = friendshipService.readFriendshipsByUserId(userId)
 
-        return friendships?.map { FriendVo(it.friendId) }
+        return friendships?.map {
+            val friend = userService.readUserById(it.friendId)
+
+            FriendVo(id = it.friendId, profileImageUrl = friend?.profileImageUrl)
+        }
     }
 }
