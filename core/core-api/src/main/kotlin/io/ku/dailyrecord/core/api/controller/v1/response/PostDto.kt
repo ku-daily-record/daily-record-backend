@@ -13,6 +13,9 @@ data class PostDto(
     @field:Schema(description = "오늘의 대표 노래 여부")
     val isFavorite: Boolean,
 
+    @field:Schema(description = "노래 앨범 이미지")
+    val imageUrl: String,
+
     @field:Schema(description = "노래 제목")
     val songName: String,
 
@@ -32,6 +35,7 @@ data class PostDto(
                     id = id,
                     userId = userId,
                     isFavorite = isFavorite,
+                    imageUrl = imageUrl,
                     songName = songName,
                     singerName = singerName,
                     comment = comment,
