@@ -1,3 +1,3 @@
 ## Swagger
 
-http://52.79.86.22:8080/daily-record/swagger-ui/index.html
+http://13.124.110.171:8080/daily-record/swagger-ui/index.html
